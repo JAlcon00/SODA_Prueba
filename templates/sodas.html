@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Lista de Sodas</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Listado de Sodas</title>
 </head>
 <body>
-    <h1>Lista de Sodas</h1>
+    <h1>Listado de Sodas</h1>
     <table>
         <tr>
+            <th>ID</th>
             <th>Nombre</th>
             <th>Precio</th>
             <th>Envase</th>
+            <th>Tamaño</th>
+            <th>Descuento</th>
+            <th>Marca</th>
         </tr>
         {% for soda in sodas %}
-            <tr>
-                <td>{{ soda.NOMBRE }}</td>
-                <td>${{ soda.PRECIO }}</td>
-                <td>{{ soda.ENVASE }}</td>
-            </tr>
+        <tr>
+            <td>{{ soda.ID_SODA }}</td>
+            <td>{{ soda.NOMBRE }}</td>
+            <td>{{ soda.PRECIO }}</td>
+            <td>{{ soda.ENVASE }}</td>
+            <td>{{ soda.TAMANO }}</td>
+            <td>{{ soda.DESCUENTO }}</td>
+            <td>{{ soda.marca.NOMBRE }}</td>
+        </tr>
         {% endfor %}
     </table>
 </body>
